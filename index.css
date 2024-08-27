@@ -14,7 +14,7 @@
    align-items: center;
    height: 70px;
    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
-   background-color: rgb(148, 37, 196);
+   background-color: rgb(22, 207, 220);
 }
 
 .header .item {
@@ -26,11 +26,24 @@
    text-decoration: none;
    font-size: 17px;
    color: white;
+   padding: 10px 20px;
+   border-radius: 5px;
+   transition: background-color 0.3s ease, transform 0.3s ease;
+   background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent button background */
 }
 
 .header .item a:hover {
-   color: rgb(119, 107, 107);
+   color: rgb(22, 207, 220);
+   background-color: white; /* Change background color on hover */
+   transform: translateY(-5px); /* Slight lift on hover */
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
 }
+
+.header .item a:active {
+   transform: translateY(-2px); /* Slightly reduce lift on click */
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Slightly reduce shadow on click */
+}
+
 
 /* Hero Section */
 .hero-sec {
@@ -142,11 +155,39 @@
    row-gap: 20px;
    height: auto;
    border-radius: 7px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.service .main-box .box:hover {
+   transform: translateY(-10px) scale(1.05); 
+   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); 
 }
 
 .service .main-box .box img {
    width: 100px;
+   transition: transform 0.3s ease; 
 }
+
+.service .main-box .box:hover img {
+   transform: rotate(10deg) scale(1.1); 
+}
+
+.service .main-box .box h1 {
+   transition: color 0.3s ease; 
+}
+
+.service .main-box .box:hover h1 {
+   color: #00bfff; 
+}
+
+.service .main-box .box p {
+   transition: color 0.3s ease;
+}
+
+.service .main-box .box:hover p {
+   color: #ccc; 
+}
+
 
 /* Skills Section */
 .skill {
@@ -205,7 +246,9 @@
    width: 100%;
 }
 
-/* Project Section */
+
+/* Project Section Styling */
+/* Project Section Styling */
 .project {
    padding-top: 40px;
    padding-bottom: 40px;
@@ -225,24 +268,28 @@
    margin-top: 20px;
 }
 
+/* Stylish Button with Hover Effect */
 .project .btn button {
-   padding: 10px 40px;
+   padding: 12px 50px;
    background-color: crimson;
    border: none;
-   font-size: 17px;
+   font-size: 18px;
    color: white;
-   border-radius: 5px;
+   border-radius: 50px;
    cursor: pointer;
-   transition: all 0.3s ease-in-out;
+   transition: all 0.4s ease-in-out;
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .project .btn button:hover {
-   padding: 10px 40px;
-   border: 2px solid crimson;
    background-color: white;
    color: crimson;
+   border: 2px solid crimson;
+   transform: translateY(-5px);
+   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Project Cards Styling */
 .project .main-box {
    margin-top: 30px;
    display: flex;
@@ -261,6 +308,7 @@
    height: auto;
    border-radius: 8px;
    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   transition: all 0.3s ease-in-out;
 }
 
 .project .main-box .box img {
@@ -279,7 +327,15 @@
    cursor: pointer;
 }
 
+/* Project Box Hover Effect */
+.project .main-box .box:hover {
+   transform: translateY(-10px);
+   box-shadow: rgba(149, 157, 165, 0.4) 0px 12px 30px;
+}
+
+
 /* Footer */
+/* Footer Section Styling */
 .foot {
    display: flex;
    justify-content: space-between;
@@ -287,18 +343,29 @@
    align-items: center;
    height: 70px;
    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-   background-color: rgb(148, 37, 196);
+   background-color: rgb(29, 204, 204);
 }
 
+/* Copyright Text Styling */
 .foot .copyright p {
    color: white;
+   font-size: 1rem;
+   transition: color 0.3s ease;
 }
 
+/* Hover Effect for Name */
 .foot .copyright p span {
    color: rgb(255, 255, 255);
    cursor: pointer;
+   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+.foot .copyright p span:hover {
+   color: crimson;
+   text-shadow: 0 0 5px crimson;
+}
+
+/* Social Media Icons Styling */
 .foot .item {
    display: flex;
    column-gap: 30px;
@@ -308,10 +375,13 @@
    text-decoration: none;
    font-size: 17px;
    color: white;
+   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* Stylish Hover Effect for Icons */
 .foot .item a:hover {
-   color: rgb(119, 107, 107);
+   transform: translateY(-5px);
+   filter: brightness(1.2);
 }
 
 /* Media Queries */
@@ -372,9 +442,13 @@
    }
 
    .foot .item {
-       flex-direction: column;
+       flex-direction: column; /* Stack icons vertically on small screens */
+       row-gap: 15px; /* Add some space between the icons */
+       margin-top: 10px; /* Add some top margin for better spacing */
    }
 }
+
+
 /* Hamburger Menu */
 .nav-toggle {
    display: none;
@@ -419,4 +493,48 @@
    .header {
        position: relative;
    }
+}
+/* Add this to your existing index.css */
+/* Add this to your existing index.css */
+
+.right {
+   display: flex;
+   justify-content: center; 
+   flex-wrap: wrap; 
+}
+/* skill logo*/
+.logo-box {
+   display: flex;
+   flex-direction: column; 
+   align-items: center; 
+   text-align: center;
+   margin: 10px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.logo-box img {
+   display: block;
+   margin: 0 auto;
+   transition: transform 0.3s ease; 
+}
+
+.logo-box p {
+   margin-top: 5px;
+   font-weight: bold;
+   color: #333;
+   transition: color 0.3s ease; 
+}
+
+/* Hover effect */
+.logo-box:hover {
+   transform: translateY(-10px) scale(1.05); 
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.logo-box:hover img {
+   transform: rotate(5deg) scale(1.1); 
+}
+
+.logo-box:hover p {
+   color: #00bfff;
 }
