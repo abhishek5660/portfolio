@@ -384,6 +384,8 @@
    filter: brightness(1.2);
 }
 
+
+
 /* Media Queries */
 @media (max-width: 768px) {
    .header {
@@ -537,4 +539,196 @@
 
 .logo-box:hover p {
    color: #00bfff;
+}
+
+
+
+/* Base Styles */
+body {
+   font-family: 'Poppins', sans-serif;
+}
+
+/* Styles for larger screens (desktops and large tablets) */
+@media (min-width: 768px) {
+   .container {
+       width: 80%;
+       margin: 0 auto;
+   }
+}
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+   .container {
+       width: 90%;
+       margin: 0 auto;
+   }
+   
+   .header {
+       padding: 0 5%;
+   }
+
+   .hero-sec .text {
+       padding: 0 5%;
+   }
+
+   .about .about-text {
+       flex-direction: column;
+       row-gap: 20px;
+   }
+
+   .service .main-box {
+       padding: 0 5%;
+       flex-direction: column;
+   }
+
+   .skill .main-box {
+       padding: 0 5%;
+       flex-direction: column;
+   }
+
+   .project .main-box {
+       padding: 0 5%;
+       flex-direction: column;
+   }
+
+   .foot {
+       padding: 0 2%;
+       flex-direction: column;
+       row-gap: 10px;
+   }
+
+   .foot .icons {
+       justify-content: center;
+       row-gap: 10px;
+   }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 480px) {
+   .header {
+       padding: 0 2%;
+   }
+
+   .hero-sec {
+       height: 400px;
+   }
+
+   .hero-sec .head-text {
+       font-size: 2.5rem;
+   }
+
+   .about {
+       padding: 0 2%;
+   }
+
+   .about .about-text .left img {
+       width: 100%;
+       height: auto;
+   }
+
+   .service {
+       padding: 0 2%;
+   }
+
+   .service .main-box {
+       padding: 0 2%;
+   }
+
+   .skill {
+       padding: 0 2%;
+   }
+
+   .skill .main-box {
+       padding: 0 2%;
+   }
+
+   .project {
+       padding: 0 2%;
+   }
+
+   .project .main-box {
+       padding: 0 2%;
+   }
+
+   .foot {
+       padding: 0 2%;
+   }
+}
+.btn {
+   text-align: center; /* Centers the button within the container */
+   margin: 20px 0; /* Adds some margin for spacing */
+}
+
+.view-more-button {
+   display: inline-block; /* Makes the link behave like a button */
+   padding: 10px 20px; /* Adds padding for button size */
+   background-color: #4CAF50; /* Green background color */
+   color: white; /* White text color */
+   text-decoration: none; /* Removes underline from link */
+   font-size: 16px; /* Sets font size */
+   border-radius: 5px; /* Rounded corners */
+   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.view-more-button:hover {
+   background-color: #45a049; /* Darker green on hover */
+}
+
+
+/* Container Styling */
+.main-box {
+   display: flex;
+   gap: 20px;
+   justify-content: center;
+   padding: 20px;
+}
+
+/* Box Styling */
+.box {
+   position: relative;
+   border: 2px solid #000;
+   overflow: hidden;
+   border-radius: 8px;
+   width: 200px;
+   text-align: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Link Styling */
+.box a {
+   display: block;
+   text-decoration: none;
+   color: #000;
+   font-size: 18px;
+   padding: 15px 10px;
+   position: relative;
+   z-index: 1;
+   font-weight: bold;
+   transition: color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.box a::before {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 0;
+   left: 0;
+   top: 50%;
+   z-index: 0;
+   transition: height 0.3s ease, top 0.3s ease;
+}
+
+.box a:hover::before {
+   height: 100%;
+   top: 0;
+}
+
+.box a:hover {
+   color: black;
 }
