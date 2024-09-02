@@ -732,3 +732,9 @@ body {
 .box a:hover {
    color: black;
 }
+.circular-image {
+   width: 750px; /* Adjust the size as needed */
+   height: 750px; /* Make sure width and height are equal */
+   border-radius: 50%; /* Makes the image circular */
+   object-fit: cover; /* Ensures the image is not distorted */
+}
