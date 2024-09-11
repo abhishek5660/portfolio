@@ -14,7 +14,7 @@
    align-items: center;
    height: 70px;
    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
-   background-color: rgb(22, 207, 220);
+   background-color: rgb(190, 156, 42);
 }
 
 .header .item {
@@ -33,7 +33,7 @@
 }
 
 .header .item a:hover {
-   color: rgb(22, 207, 220);
+   color: rgb(22, 174, 220);
    background-color: white; /* Change background color on hover */
    transform: translateY(-5px); /* Slight lift on hover */
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
@@ -282,7 +282,7 @@
 }
 
 .project .btn button:hover {
-   background-color: white;
+   background-color: rgb(61, 153, 127);
    color: crimson;
    border: 2px solid crimson;
    transform: translateY(-5px);
@@ -343,7 +343,7 @@
    align-items: center;
    height: 70px;
    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-   background-color: rgb(29, 204, 204);
+   background-color: rgb(190, 156, 42);
 }
 
 /* Copyright Text Styling */
@@ -660,20 +660,25 @@ body {
 }
 
 .view-more-button {
-   display: inline-block; /* Makes the link behave like a button */
-   padding: 10px 20px; /* Adds padding for button size */
-   background-color: #4CAF50; /* Green background color */
-   color: white; /* White text color */
-   text-decoration: none; /* Removes underline from link */
-   font-size: 16px; /* Sets font size */
-   border-radius: 5px; /* Rounded corners */
-   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+   padding: 12px 50px;
+   background-color: crimson;
+   border: none;
+   font-size: 18px;
+   color: white;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: all 0.4s ease-in-out;
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+   text-decoration: none; /* Ensure no underline */
 }
 
 .view-more-button:hover {
-   background-color: #45a049; /* Darker green on hover */
+   background-color: white;
+   color: crimson;
+   border: 2px solid crimson;
+   transform: translateY(-5px);
+   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 /* Container Styling */
 .main-box {
@@ -738,3 +743,7 @@ body {
    border-radius: 50%; /* Makes the image circular */
    object-fit: cover; /* Ensures the image is not distorted */
 }
+
+
+
+
