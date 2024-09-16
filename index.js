@@ -1,47 +1,103 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Handle social media icon clicks
-  const socialMediaLinks = document.querySelectorAll('.foot .item a');
-
-  socialMediaLinks.forEach(link => {
-      link.addEventListener('click', function(event) {
-          event.preventDefault();
-          const socialMedia = link.querySelector('img').alt;
-          alert(`You clicked on ${socialMedia}`);
-          window.open(link.href, '_blank');
-      });
+$(document).ready(function () {
+    $(window).scroll(function () {
+      //  sticky navbar on scroll script  //
+      if (this.scrollY > 20) {
+        $(".navbar").addClass("sticky");
+      } else {
+        $(".navbar").removeClass("sticky");
+      }
+  
+      //  scroll-up button show/hide script  //
+      if (this.scrollY > 500) {
+        $(".scroll-up-btn").addClass("show");
+      } else {
+        $(".scroll-up-btn").removeClass("show");
+      }
+    });
+  
+    //  slide-up script  //
+  
+    $(".scroll-up-btn").click(function () {
+      $("html").animate({ scrollTop: 0 });
+      //  removing smooth scroll on slide-up button click  //
+      $("html").css("scrollBehavior", "auto");
+    });
+  
+    $(".navbar .menu li a").click(function () {
+      //  Smooth scroll on Menu Items click  //
+  
+      $("html").css("scrollBehavior", "smooth");
+    });
+  
+    //  Toggle Navbar  //
+  
+    $(".menu-btn").click(function () {
+      $(".navbar .menu").toggleClass("active");
+      $(".menu-btn i").toggleClass("active");
+    });
+  
+    //  Typing Text Animation  //
+  
+    var typed = new Typed(".typing", {
+      strings: [
+        "Web Developer",
+        "Software Developer",
+      ],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true
+    });
+  
+    var typed = new Typed(".typing-2", {
+      strings: [
+        "Web Developer",
+        "Software Developer",
+      
+      ],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true
+    });
+  
+    //  Owl Carousel  //
+  
+    $(".carousel").owlCarousel({
+      margin: 20,
+      loop: true,
+      autoplay: true,
+      autoplayTimeOut: 2000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        600: {
+          items: 2,
+          nav: false
+        },
+        1000: {
+          items: 3,
+          nav: false
+        }
+      }
+    });
   });
-
-  // Handle "View More" button click in Projects section
-  const viewMoreButton = document.querySelector('.project .btn button');
-
-  viewMoreButton.addEventListener('click', function() {
-      alert('View more projects coming soon!');
-  });
-});
-
-function toggleMenu() {
-  const navItems = document.getElementById('nav-items');
-  navItems.style.display = navItems.style.display === 'flex' ? 'none' : 'flex';
-}
-    function toggleMenu() {
-        const navItems = document.getElementById('nav-items');
-        navItems.classList.toggle('active');
-    }
-
-    const nameInput = document.getElementById("name-Input");
+    const nameInput = document.getElementById("name-input");
     const msgInput = document.getElementById("message-input");
     const callBtn = document.getElementById("call-btn");
     const mailBtn = document.getElementById("mail-btn");
     const chatBtn = document.getElementById("chat-btn");
-    
+
     callBtn.addEventListener("click", () => {
-      window.location.href = "tel:+918219472136";
+        window.location.href = "tel:+918219472136";
     });
-    
+
     mailBtn.addEventListener("click", () => {
-      window.location.href = `mailto:abhishekkatoch50@gmail.com?body=${msgInput.value}`;
+        window.location.href = `mailto:abhishekkatoch50@gmail.com?body=${msgInput.value}`;
     });
-    
+
     chatBtn.addEventListener("click", () => {
-      window.location.href = `https://wa.me/+918219472136?text=${msgInput.value}`;
+        window.location.href = `https://wa.me/+918219472136?text=${encodeURIComponent(msgInput.value)}`;
     });
+
