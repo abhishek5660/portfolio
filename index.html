@@ -1,157 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=3.0">
-    <title>Abhishek Katoch - Web Developer</title>
-    <link rel="preload" as="image" href="https://developergtm.in/wp-content/uploads/2024/04/Screenshot-2024-04-02-211502.png" imagesizes="(max-width: 749px) 100vw, 749px" />
-    <link rel="preload" as="font" href="https://developergtm.in/wp-content/themes/smart-mag/css/icons/fonts/ts-icons.woff2?v2.8" type="font/woff2" crossorigin="anonymous" />
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-    
-    <nav class="header">
-        <div class="logo">
-            <h1>Abhishek Katoch</h1>
+  <head>
+    <title>Portfolio Landing Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"rel="stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+      <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+      </div>
+      <!-- Header -->
+      <nav class="navbar">
+        <div class="max-width">
+          <div class="logo"><a href=""><span>ABHISHEK</span><span></span></a></div>
+          <ul class="menu">
+            <li><a href="#home" class="menu-btn"><strong>Home</strong></a></li>
+            <li><a href="#about" class="menu-btn"><strong>About</strong></a></li>
+            <li><a href="#services" class="menu-btn"><strong>Services</strong></a></li>
+            <li><a href="#skills" class="menu-btn"><strong>Skills</strong></a></li>
+            <li><a href="#contact" class="menu-btn"><strong>Contact</strong></a></li>
+          </ul>
+          <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
         </div>
-    
-        <div class="item" id="nav-items">
-            <a href="/">Home</a>
-            <a href="/">Projects</a>
-            <a href="https://contactus-gules.vercel.app/">Contact Us</a>
-        </div>
-    
-        <button class="nav-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-    
-    <section class="about">
-        <div class="txt">
-            <h1>About Me</h1>
-        </div>
-        <div class="about-text">
-            <div class="left">
-                <img src="./profilepic.jpg" width="900" height="900" class="circular-image" >
+      </nav>
 
+      <!-- Home -->
+      <section class="home" id="home">
+        <div class="max-width">
+          <div class="home-content">
+            <div class="text-1">Hello, This is</div>
+            <div class="text-2">ABHISHEK KATOCH</div>
+            <div class="text-3">And I'm a <span class="typing"></span></div>
+            <a href="#">Hire me</a>
+          </div>
+        </div>
+      </section>
+
+      <!--  About  -->
+      <section class="about" id="about">
+        <div class="max-width">
+          <h2 class="title">About Me</h2>
+          <div class="about-content">
+            <div class="column left">
+                <img src="./images/profilepic.jpg" width="900" height="900">
             </div>
+            <div class="column right">
+              <div class="text">I'm Abhishek and I'm a <span class="typing-2"></span></div>
+              <p> I am pursuing a Bachelor of Engineering in Computer Science Engineering at Chitkara University, 
+                Himachal Pradesh. I am dedicated to finding new solutions in technology and implementing them. My aim is to find solutions to problems in innovative and creative ways. I believe
+                in developing better solutions by working with my creativity and dedication. My interest lies in graphic design and editing.</p>
+              <br>
+              <div class="text">Why Work With Me</div>
+              <p>I'm a great communicator & love to invest the necessary time to understand the customer's problem very well.</p>
 
-            <div class="right">
-                <p><span>Hello, I'm Abhishek Katoch, a Web Developer..🤩</span> <br> My name is Abhishek Katoch. I am pursuing a Bachelor of Engineering in Computer Science Engineering at Chitkara University, 
-                    Himachal Pradesh. I am dedicated to finding new solutions in technology and implementing them. My aim is to find solutions to problems in innovative and creative ways. I believe
-                    in developing better solutions by working with my creativity and dedication. My interest lies in graphic design and editing.</p>
-             
+              <a href="#link" target="blank">Download CV</a>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="service">
-        <div class="txt">
-            <h1>My Services</h1>
-        </div>
-        <div class="main-box">
-            <div class="box">
-                <img decoding="async" src="https://t3.ftcdn.net/jpg/00/85/73/28/360_F_85732813_H42V97IazS9xQNfMPYrbk1fgQcg9l8rs.jpg" alt="Web Design">
-                <h1>Web Design</h1>
-                <p>Web design involves creating the visual layout and aesthetics of a website, focusing on user experience, graphics, and overall look.</p>
+      <!-- Services -->
+      <section class="services" id="services">
+        <div class="max-width">
+          <h2 class="title">My services</h2>
+          <div class="serv-content">
+            <div class="card">
+              <div class="box">
+                <i class="fas fa-laptop-code"></i>
+                <div class="text">Web Design</div>
+                <p>sual layout and aesthetics of a website, focusing on user experience, graphics, and overall look.</p>
+              </div>
             </div>
-
-            <div class="box">
-                <img decoding="async" src="https://static.vecteezy.com/system/resources/previews/010/950/447/non_2x/movie-film-editor-logo-design-video-editing-logo-concept-free-vector.jpg" alt="Advertising">
-                <h1>Editing</h1>
+            <div class="card">
+              <div class="box">
+                <i class="fas fa-user-secret"></i>
+                <div class="text">Editing</div>
                 <p>Editing involves making revisions to and suggestions about the content of a document.</p>
+              </div>
             </div>
-
-            <div class="box">
-                <img decoding="async" src="https://t4.ftcdn.net/jpg/03/89/91/47/360_F_389914764_ZGT4ZJ0VBRFutqbLNX36v6wdZqFw2HXS.jpg" alt="Graphic Design">
-                <h1>Graphic Design</h1>
+            <div class="card">
+              <div class="box">
+                <i class="fas fa-code"></i>
+                <div class="text">Graphic Design</div>
                 <p>Graphic design is a craft where professionals create visual content to communicate messages.</p>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="skill">
-        <div class="txt">
-            <h1>My Skills</h1><b><br>
-        </div>
-       
-        <div class="right">
-            <div class="logo-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Logo" style="width: 50px;">
+     <!-- Skills -->
+<section class="skills" id="skills">
+    <div class="max-width">
+        <h2 class="title">My Skills</h2>
+        <div class="skills-content">
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Logo">
                 <p>HTML</p>
             </div>
-            <div class="logo-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Logo" style="width: 50px;">
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Logo">
                 <p>CSS</p>
             </div>
-            <div class="logo-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Logo" style="width: 50px;">
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Logo">
                 <p>JavaScript</p>
             </div>
-            <div class="logo-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React Logo" style="width: 50px;">
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React Logo">
                 <p>React</p>
             </div>
-            <div class="logo-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="React Logo" style="width: 50px;">
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Git Logo">
                 <p>Git</p>
-                
+            </div>
+            <!-- Add more skills as needed -->
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="project">
-        <div class="txt">
-            <h1>My Projects</h1>
-        </div>
-        <div class="main-box">
-            <div class="box">
-                <a href="https://netflix-clone-tawny-three.vercel.app/">
-                    <p>Netflix Clone Project</p>
-                    <img src="https://i.ytimg.com/vi/Tgat3-prVv4/maxresdefault.jpg">
-                </a>
+<!-- Projects -->
+<section class="projects" id="projects">
+    <div class="max-width">
+        <h2 class="title">My Projects</h2>
+        <div class="proj-content">
+            <div class="proj-card">
+                <div class="proj-box">
+                    <img src="https://i.ytimg.com/vi/Tgat3-prVv4/maxresdefault.jpg" alt="Project 1">
+                    <div class="proj-text">Project 1</div>
+                    <p>Netflix Clone Project Using HTML, CSS, JAVASCRIPT</p>
+                    <a href="https://netflix-clone-tawny-three.vercel.app/" target="_blank">View Project</a>
+                </div>
             </div>
-    
-            <div class="box">
-                <a href="https://todolist-jet-kappa.vercel.app/">
+            <div class="proj-card">
+                <div class="proj-box">
+                    <img src="https://i.ytimg.com/vi/G0jO8kUrg-I/maxresdefault.jpg" alt="Project 2">
+                    <div class="proj-text">Project 2</div>
                     <p>To-Do List Project</p>
-                    <img src="https://i.ytimg.com/vi/G0jO8kUrg-I/maxresdefault.jpg">
-                </a>
+                    <a href="https://todolist-jet-kappa.vercel.app/" target="_blank">View Project</a>
+                </div>
             </div>
-    
-            <div class="box">
-                <a href="https://google-clone-beta-seven.vercel.app/">
+            <div class="proj-card">
+                <div class="proj-box">
+                    <img src="https://www.onepercentbetter.dev/static/img/projects/google-project-thumbnail.png" alt="Project 2">
+                    <div class="proj-text">Project 2</div>
                     <p>Google Clone Project</p>
-                    <img src="https://www.onepercentbetter.dev/static/img/projects/google-project-thumbnail.png">
-                </a>
+                    <a href="https://google-clone-beta-seven.vercel.app/" target="_blank">View Project</a>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+     <!-- Contact -->
+<section class="contact" id="contact">
+    <div class="max-width">
+       
+            <div class="column right">
+                <div class="contact-container">
+                    <h1>Contact Us</h1>
+                    <p>Name: <input type="text" id="name-input" placeholder="Enter your name"></p>
+                    <p>Message: <textarea id="message-input" cols="30" rows="10" placeholder="Enter your message"></textarea></p>
+                    
+                    <!-- Contact buttons -->
+                    <button id="call-btn">Call us</button>
+                    <button id="mail-btn">Mail us</button>
+                    <button id="chat-btn">Chat with us</button>
+                </div>
             </div>
         </div>
-        <div class="btn">
-            <a href="C:/Users/navin/AppData/Local/Microsoft/Windows/INetCache/IE/1QJC2NSZ/abhishekkatochresume5thsem[1].pdf" class="view-more-button" download="YourCV">Resume</a>
-        </div>
-        
-        <div class="contact-container">
-            <h1>Contact Us</h1> <!-- Added heading -->
-            <p>Name: <input type="text" name="" id="name-Input"></p>
-            <p>Message: <textarea name="" id="message-input" cols="30" rows="10"></textarea></p>
+    </div>
+</section>
+
+
             
-            <!-- Contact buttons -->
-            <button id="call-btn">Call us</button>
-            <button id="mail-btn">Mail us</button>
-            <button id="chat-btn">Chat with us</button>
-            
-            <script src="index.js"></script>
-        </div>
-        
-    </section>
-    
     <footer class="foot">
         <div class="copyright">
             <p>Designed By <span>Abhishek Katoch</span></p>
@@ -176,6 +205,11 @@
         </div>
     </footer>
     
-
-</body>
+      <script src='https://kit.fontawesome.com/3b57a2a2a7.js'></script>
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+    <script src="index.js"></script>
+  </body>
 </html>
