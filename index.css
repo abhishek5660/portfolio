@@ -212,8 +212,8 @@
   /*  Home  */
   .home {
     display: flex;
-    background: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fdark-website-background&psig=AOvVaw2HZgEOCWYfjewmogfz4GPx&ust=1728536573260000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNCfldXCgIkDFQAAAAAdAAAAABAE") no-repeat
-      center;
+    background: url("https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat 
+        center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
