@@ -212,7 +212,7 @@
   /*  Home  */
   .home {
     display: flex;
-    background: url("https://www.canva.com/design/DAGTFQ02Xww/mgP9uD31RUvn5rHDhdfuMA/edit?utm_content=DAGTFQ02Xww&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton") no-repeat 
+    background: url("./darkbackground.jpg") no-repeat 
         center;
     height: 100vh;
     color: #fff;
