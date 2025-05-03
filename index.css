@@ -212,7 +212,7 @@
   /*  Home  */
   .home {
     display: flex;
-    background: url("./newdarkbackground.jpg") no-repeat 
+    background: url("./portfoliohome.jpg") no-repeat 
         center;
     height: 100vh;
     color: #fff;
