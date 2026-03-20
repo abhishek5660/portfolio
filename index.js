@@ -100,4 +100,3 @@ $(document).ready(function () {
     chatBtn.addEventListener("click", () => {
         window.location.href = `https://wa.me/+918219472136?text=${encodeURIComponent(msgInput.value)}`;
     });
-
